@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Erstelle/Bearbeite deine C Datei und führe sie aus."
+echo "Folgende C Dateien existieren bereits:"
+ls -d */
+echo "Name des Programms (nicht aus der Liste für ein neues Programm):"
+read filename
+if [ ! -d "$filename" ]
+then
+	mkdir $filename
+	cp ~/prog1/baseProg.c $filename/$filename.c
+	echo "Ihre Datei wurde erstellt."
+else
+	echo "Die Datei existiert bereits. Sie können diese nun bearbeiten."
+fi
+
+vim "$filename/$filename.c" && gcc "$filename/$filename.c" -o "$filename/$filename.o"
+echo "---"
+echo "Der Output Ihres Programms:"
+echo "---"
+"$filename/./$filename.o"  
