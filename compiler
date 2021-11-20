@@ -8,7 +8,7 @@ read filename
 if [ ! -d "$filename" ]
 then
 	mkdir $filename
-	cp ~/prog1/baseProg.c $filename/$filename.c
+	cp ~/Desktop/c-compiler/baseProg.c $filename/$filename.c
 	echo "Ihre Datei wurde erstellt."
 else
 	echo "Die Datei existiert bereits. Sie können diese nun bearbeiten."
