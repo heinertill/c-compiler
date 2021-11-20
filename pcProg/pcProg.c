@@ -2,6 +2,6 @@
 #include <stdbool.h>
 
 int main() {
-	printf("Hallo Welt!\n");
+	printf("Eine Änderung an pcProg wurde vorgenommen.\n");
 	return 0;
 }
